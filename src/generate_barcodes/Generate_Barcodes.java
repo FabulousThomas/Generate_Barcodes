@@ -21,14 +21,13 @@ public class Generate_Barcodes {
 	
 	
 	public static void main(String[] args) {
-		Generate_Barcodes.createImage("phoneTest.png", "09074157706");
+		Generate_Barcodes.createImage("Sweet Spicy & Crunchy-100g.png", "Sweet Spicy & Crunchy-100g - 5260807918063");
 		System.out.println("finished");
 	}
 
-	public static void createImage(String image_name,String myString)  {
+	public static void createImage(String image_name,String myString)  {    
 		try {
-			
-	
+		
 		Code128Bean code128 = new Code128Bean();
 		code128.setHeight(15f);
 		code128.setModuleWidth(0.3);
@@ -41,12 +40,13 @@ public class Generate_Barcodes {
 		canvas.finish();
 
 		//write to png file
-		FileOutputStream fos = new FileOutputStream("C:\\Users\\Thomas\\Pictures\\"+image_name);
+		FileOutputStream fos = new FileOutputStream("C:\\Users\\Thomas\\Documents\\QR_Codes\\Just African LTD\\"+image_name);
 		fos.write(baos.toByteArray());
 		fos.flush();
 		fos.close();
 		} catch (Exception e) {
 			// TODO: handle exception
+                    e.printStackTrace();
 		}
 	}
 
