@@ -21,7 +21,7 @@ public class Generate_Barcodes {
 	
 	
 	public static void main(String[] args) {
-		Generate_Barcodes.createImage("Sweet Spicy & Crunchy-100g.png", "Sweet Spicy & Crunchy-100g - 5260807918063");
+		Generate_Barcodes.createImage("YOUR_BARCODE_NAME.png", "BARCODE_INFO(CONTENT)");
 		System.out.println("finished");
 	}
 
@@ -40,7 +40,7 @@ public class Generate_Barcodes {
 		canvas.finish();
 
 		//write to png file
-		FileOutputStream fos = new FileOutputStream("C:\\Users\\Thomas\\Documents\\QR_Codes\\Just African LTD\\"+image_name);
+		FileOutputStream fos = new FileOutputStream("PATH_TO_SAVE_YOUR_BARCODE"+image_name);
 		fos.write(baos.toByteArray());
 		fos.flush();
 		fos.close();
